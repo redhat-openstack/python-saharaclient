@@ -13,6 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pbr import version
 
-version_info = version.VersionInfo('python-saharaclient')
+class VersionInfo(object):
+    release = 'REDHAT_SAHARACLIENT_RELEASE'
+    version = 'REDHAT_SAHARACLIENT_VERSION'
+
+    def version_string(self):
+        return self.version
+
+    def release_string(self):
+        return self.release
+
+
+version_info = VersionInfo()
